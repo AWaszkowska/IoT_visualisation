@@ -265,6 +265,40 @@ $(document).ready(() => {
         const averageTemperature2 = existingDeviceData.calculateAverageTemperature2();
         const averageHum2 = existingDeviceData.calculateAverageHum2();
         console.log(averageTemperature);
+
+        if (iotData["Temperature_1"] > 30) {
+          const alarmDiv = document.querySelector('.alarm');
+          alarmDiv.style.backgroundColor = 'red';
+        } else {
+          const alarmDiv = document.querySelector('.alarm');
+          alarmDiv.style.backgroundColor = 'white';
+        }
+
+        if (iotData["Temperature_2"] > 20) {
+          const alarmDiv = document.querySelector('.alarm2');
+          alarmDiv.style.backgroundColor = 'red';
+        } else {
+          const alarmDiv = document.querySelector('.alarm2');
+          alarmDiv.style.backgroundColor = 'white';
+        }
+
+        if (iotData["Humidity_1"] > 80) {
+          const alarmDiv = document.querySelector('.alarm');
+          alarmDiv.style.backgroundColor = 'red';
+        } else {
+          const alarmDiv = document.querySelector('.alarm');
+          alarmDiv.style.backgroundColor = 'white';
+        }
+
+        if (iotData["Humidity_2"] > 70) {
+          const alarmDiv = document.querySelector('.alarm2');
+          alarmDiv.style.backgroundColor = 'red';
+        } else {
+          const alarmDiv = document.querySelector('.alarm2');
+          alarmDiv.style.backgroundColor = 'white';
+        }
+
+
         // that's for html
         if (!isNaN(averageTemperature)) {
           // Update the HTML element with the average temperature

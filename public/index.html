@@ -15,6 +15,13 @@
 </head>
 
 <body>
+    
+    <div class="mainpage">
+        
+        <img src="Home.png" alt="mainpage">
+        <button class="hideButton">Enter</button>
+    </div>
+    
     <h1 class="flexHeader">
         <span>
             <span id="deviceCount">0 devices</span>
@@ -25,15 +32,29 @@
     <div id="averageTemperature"></div>
     <p></p>
     <div id="averageHum"></div>
-    <div>
+    <div class="container">
+    <div class="alarm">
         <canvas id="iotChart"></canvas>
+    </div>
     </div>
     <div id="averageTemperature2"></div>
     <p></p>
     <div id="averageHum2"></div>
-    <div>
+    <div class="container">
+    <div class="alarm2">
         <canvas id="iotChart2"></canvas>
     </div>
+    </div>
+
+    <script>
+        var hideButton = document.querySelector('.hideButton');
+        var mainpage = document.querySelector('.mainpage');
+
+        hideButton.addEventListener('click', function() {
+            mainpage.style.display = 'none';
+        });
+    </script>
+
 </body>
 
 </html>
