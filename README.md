@@ -1,3 +1,7 @@
+It is a modified Azure sample. Solved JSON reading issue, so it is actually possible to display telemetry payload. Added second sensor displaying, mean temperature and humidity calculation and alarm when temperature or humidity is exceeded.
+
+
+
 ---
 page_type: sample
 languages:
